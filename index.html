@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            Project Title
+        </title>
+        <meta charset="utf-8"></meta>
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"></meta>
+        <meta content="target-densitydpi=device-dpi, width=device-width, initial-sc…m-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" name="viewport"></meta>
+        <style>
+             @-ms-viewport { width: device-width; } 
+        </style>
+        <link href="vendor/reset.min.css" rel="stylesheet"></link>
+        <link href="style.css" rel="stylesheet"></link>
+    </head>
+    <body class="multiple-scenes view-control-buttons desktop no-touch fullscreen-enabled">	
+        <div id="pano" style="overflow: hidden; cursor: default;">
+            <canvas style="position: absolute; height: 657px; width: 1366px;" width="1366" height="657"></canvas>
+			<div style="position: absolute; height: 100%; width: 100%; background-color: rgb(0, 0, 0); opacity: 0;"></div>
+			<a href="http://www.marzipano.net/" target="_blank" style="opacity: 1 ! important; visibility: visible ! important; tra…important; top: auto; bottom: 10px; left: auto; right: 15px;">
+				<img style="display:block !important;opacity:1 !important;visibility:vis…!important;width:auto !important;position:static !important;" src="data:image/png;base64,iVBORw0K…IfiGyGLaAclDgAAAAASUVORK5CYII="></img>
+			</a>
+			
+			<div style="position: absolute; left: 0px; top: 0px; pointer-events: non…translateZ(0px); height: 0px; width: 0px; overflow: visible;">
+				<div style="position: absolute; pointer-events: all; opacity: 1;">
+					<div class="hotspot link-hotspot" style="display: block; left: 0px; top: 0px; transform: translateX(1…) translateY(324.152px) translateZ(0px); position: absolute;">
+						<img class="link-hotspot-icon" src="img/link.png" style="transform: rotate(0rad);"></img>
+						<div class="hotspot-tooltip link-hotspot-tooltip">
+							Electricity Museum
+						</div>
+					</div>
+					<div class="hotspot info-hotspot" style="display: none;">
+						<div class="info-hotspot-header">
+							<div class="info-hotspot-icon-wrapper">
+								<img class="info-hotspot-icon" src="img/info.png"></img>
+							</div>
+							<div class="info-hotspot-title-wrapper">
+								<div class="info-hotspot-title">
+									Oriente Station
+								</div>
+							</div>
+							<div class="info-hotspot-close-wrapper">
+								<img class="info-hotspot-close-icon" src="img/close.png"></img>
+							</div>
+						</div>
+						<div class="info-hotspot-text">
+							The Oriente Station is one of the most important b…
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="position: absolute; left: 0px; top: 0px; pointer-events: non…translateZ(0px); height: 0px; width: 0px; overflow: visible;">
+				<div style="position: absolute; pointer-events: all;">
+					<div class="hotspot link-hotspot" style="display: none;">
+						<img class="link-hotspot-icon" src="img/link.png" style="transform: rotate(5.49779rad);"></img>
+						<div class="hotspot-tooltip link-hotspot-tooltip">
+							Jerónimos Monastery
+						</div>
+					</div>
+					<div class="hotspot info-hotspot" style="display: none;">
+						<div class="info-hotspot-header">
+							<div class="info-hotspot-icon-wrapper">
+								<img class="info-hotspot-icon" src="img/info.png"></img>
+							</div>
+							<div class="info-hotspot-title-wrapper">
+								<div class="info-hotspot-title">
+									Boilers Room
+								</div>
+							</div>
+							<div class="info-hotspot-close-wrapper">
+								<img class="info-hotspot-close-icon" src="img/close.png"></img>
+							</div>
+						</div>
+						<div class="info-hotspot-text">
+							In the impressive Boilers Room are displayed four …
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div style="position: absolute; left: 0px; top: 0px; pointer-events: non…translateZ(0px); height: 0px; width: 0px; overflow: visible;">
+				<div style="position: absolute; pointer-events: all;">
+					<div class="hotspot link-hotspot" style="display: none;">
+						<img class="link-hotspot-icon" src="img/link.png" style="transform: rotate(0rad);"></img>
+						<div class="hotspot-tooltip link-hotspot-tooltip">
+							Oriente Station
+						</div>
+					</div>
+					<div class="hotspot info-hotspot" style="display: none;">
+						<div class="info-hotspot-header">
+							<div class="info-hotspot-icon-wrapper">
+								<img class="info-hotspot-icon" src="img/info.png"></img>
+							</div>
+							<div class="info-hotspot-title-wrapper">
+								<div class="info-hotspot-title">
+									Jerónimos Monastery
+								</div>
+							</div>
+							<div class="info-hotspot-close-wrapper">
+								<img class="info-hotspot-close-icon" src="img/close.png"></img>
+							</div>
+						</div>
+						<div class="info-hotspot-text">
+							The cloister is a pleasant and serene place intend…
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="sceneList" class="enabled">
+			<ul class="scenes">
+				<a class="scene current" data-id="gare_do_oriente" href="#">
+					<li class="text">
+						Oriente Station
+					</li>
+				</a>
+				<a class="scene" data-id="museu_da_electricidade" href="#">
+					<li class="text">
+						Electricity Museum
+					</li>
+				</a>
+				<a class="scene" data-id="jeronimos" href="#">
+					<li class="text">
+						Jerónimos Monastery
+					</li>
+				</a>
+			</ul>
+		</div>
+		
+		<div id="titleBar">
+			<h1 class="sceneName">
+				Oriente Station
+			</h1>
+		</div>
+		
+		<a id="autorotateToggle" class="" href="#">
+			<img class="icon off" src="img/play.png"></img>
+			<img class="icon on" src="img/pause.png"></img>
+		</a>
+		<a id="fullscreenToggle" href="#">
+			<img class="icon off" src="img/fullscreen.png"></img>
+			<img class="icon on" src="img/windowed.png"></img>
+		</a>
+		<a id="sceneListToggle" class="enabled" href="#">
+			<img class="icon off" src="img/expand.png"></img>
+			<img class="icon on" src="img/collapse.png"></img>
+		</a>
+		<a id="viewUp" class="viewControlButton viewControlButton-1" href="#">
+			<img class="icon" src="img/up.png"></img>
+		</a>
+		<a id="viewDown" class="viewControlButton viewControlButton-2" href="#">
+			<img class="icon" src="img/down.png"></img>
+		</a>
+		<a id="viewLeft" class="viewControlButton viewControlButton-3" href="#">
+			<img class="icon" src="img/left.png"></img>
+		</a>
+		<a id="viewRight" class="viewControlButton viewControlButton-4" href="#">
+			<img class="icon" src="img/right.png"></img>
+		</a>
+		<a id="viewIn" class="viewControlButton viewControlButton-5" href="#">
+			<img class="icon" src="img/plus.png"></img>
+		</a>
+		<a id="viewOut" class="viewControlButton viewControlButton-6" href="#">
+			<img class="icon" src="img/minus.png"></img>
+		</a>
+		
+		<script src="vendor/es5-shim.js"></script>
+		<script src="vendor/eventShim.js"></script>
+		<script src="vendor/classList.js"></script>
+		<script src="vendor/requestAnimationFrame.js"></script>
+		<script src="vendor/screenfull.min.js"></script>
+		<script src="vendor/bowser.min.js"></script>
+		<script src="vendor/marzipano.js"></script>
+		<script src="data.js"></script>
+		<script src="vendor/fastclick.js"></script>
+		<script src="index.js"></script>
+
+		<div class="info-hotspot-modal">
+			<div class="info-hotspot-header">
+				<div class="info-hotspot-icon-wrapper">
+					<img class="info-hotspot-icon" src="img/info.png"></img>
+				</div>
+				<div class="info-hotspot-title-wrapper">
+					<div class="info-hotspot-title">
+						Oriente Station
+					</div>
+				</div>
+				<div class="info-hotspot-close-wrapper">
+					<img class="info-hotspot-close-icon" src="img/close.png"></img>
+				</div>
+			</div>
+			<div class="info-hotspot-text">
+				The Oriente Station is one of the most important b…
+			</div>
+		</div>
+		
+		<div class="info-hotspot-modal">
+			<div class="info-hotspot-header">
+				<div class="info-hotspot-icon-wrapper">
+					<img class="info-hotspot-icon" src="img/info.png"></img>
+				</div>
+				<div class="info-hotspot-title-wrapper">
+					<div class="info-hotspot-title">
+						Boilers Room
+					</div>
+				</div>
+				<div class="info-hotspot-close-wrapper">
+					<img class="info-hotspot-close-icon" src="img/close.png"></img>
+				</div>
+			</div>
+			<div class="info-hotspot-text">
+				In the impressive Boilers Room are displayed four …
+			</div>
+		</div>
+		
+		<div class="info-hotspot-modal">
+			<div class="info-hotspot-header">
+				<div class="info-hotspot-icon-wrapper">
+					<img class="info-hotspot-icon" src="img/info.png"></img>
+				</div>
+				<div class="info-hotspot-title-wrapper">
+					<div class="info-hotspot-title">
+						Jerónimos Monastery
+					</div>
+				</div>
+				<div class="info-hotspot-close-wrapper">
+                    <img class="info-hotspot-close-icon" src="img/close.png"></img>
+                </div>
+            </div>
+            <div class="info-hotspot-text">
+                The cloister is a pleasant and serene place intend…
+            </div>
+        </div>
+    </body>
+</html>
